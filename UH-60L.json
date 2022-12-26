@@ -42,9 +42,9 @@
                                                "physical_variant": "toggle_switch"
                                         },
                              "BATT_SW": {
-                                                       "category": "Electric Systems",
+                                                    "category": "Electric Systems",
                                                    "control_type": "selector",
-                                                    "description": "Battery Switch OFF/ON",
+                                                    "description": "Battery Switch, ON/OFF",
                                                      "identifier": "BATT_SW",
                                                          "inputs": [ {
                                                                        "description": "switch to previous or next state",
@@ -52,14 +52,18 @@
                                                                    }, {
                                                                        "description": "set position",
                                                                          "interface": "set_state",
-                                                                         "max_value": 2
-                                                                   } ],
+                                                                         "max_value": 1
+                                                                   }, {
+                                                                    "argument": "TOGGLE",
+                                                                 "description": "Toggle switch state",
+                                                                   "interface": "action"
+                                                             } ],
                                             "momentary_positions": "none",
                                                         "outputs": [ {
                                                                            "address": 34311,
                                                                        "description": "selector position",
                                                                               "mask": 24576,
-                                                                         "max_value": 2,
+                                                                         "max_value": 1,
                                                                           "shift_by": 13,
                                                                             "suffix": "",
                                                                               "type": "integer"
