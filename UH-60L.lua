@@ -22,7 +22,7 @@ local defineIntegerFromGetter = BIOS.util.defineIntegerFromGetter
 local defineString = BIOS.util.defineString
 local defineRotary = BIOS.util.defineRotary
 --
-local cockpit = "Vendored/"
+local cockpit = BIOS.CurrentPluginDir.."Vendored\\"
 dofile(cockpit.."devices.lua")
 dofile(cockpit.."command_defs.lua")
 -- local function defineAV8BCommSelector(msg, device_id, command, arg_delta, arg_number, category, description)
@@ -355,7 +355,7 @@ defineString("COMM1_STRING_FREQ", getARC164_COMM1_String_Frequency, 7, "AAA", "C
 -- -- Electrical Panel
 -- defineToggleSwitch("DC_TEST_SW", 1, 3609, 609, "Electric Panel", "DC Test Switch")
 -- defineMultipositionSwitch("APU_GEN_SW", 1, 3610, 610, 3, 0.5, "Electric Panel", "APU Generator Switch OFF/ON/RESET")
-defineToggleSwitch("BATT_SW", devices.ELECTRIC_SYSTEM, EFM_commands.batterySwitch, 13, "Electrical Systems", "Battery Switch")
+defineToggleSwitch("BATT_SW", devices.EFM_HELPER, EFM_commands.batterySwitch, 17, "Electrical Systems", "Battery Switch, ON/OFF")
 -- defineToggleSwitch("ENG_START_SW", 1, 3611, 611, "Electric Panel", "Engine Start Switch")
 -- defineMultipositionSwitch("GEN_SW", 1, 3612, 612, 3, 0.5, "Electric Panel", "Generator Switch  TEST/OFF/ON")
 -- defineMultipositionSwitch("BATT_SW", 1, 3613, 613, 3, 0.5, "Electric Panel", "Battery Switch  ALERT/OFF/ON")
