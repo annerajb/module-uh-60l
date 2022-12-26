@@ -1,4 +1,20 @@
 {
+  "AAA": {
+               "COMM1_STRING_FREQ": {
+                                            "category": "AAA",
+                                        "control_type": "display",
+                                         "description": "COMM1 ARC-164 Frequency (string)",
+                                          "identifier": "COMM1_STRING_FREQ",
+                                              "inputs": [  ],
+                                             "outputs": [ {
+                                                                "address": 30744,
+                                                            "description": "COMM1 ARC-164 Frequency (string)",
+                                                             "max_length": 7,
+                                                                 "suffix": "",
+                                                                   "type": "string"
+                                                        } ]
+                                    }
+  },
   "Electrical Systems": {
                           "APU_GEN_SW": {
                                                        "category": "Electric Panel",

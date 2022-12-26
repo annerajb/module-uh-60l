@@ -1,4 +1,4 @@
-BIOS.protocol.beginModule("UH-60L", 0x7800)
+BIOS.protocol.beginModule("UH-60L", 0x8600)
 BIOS.protocol.setExportModuleAircrafts({"UH-60L"})
 --by WarLord (aka BlackLibrary) v.2.2
 
@@ -121,16 +121,17 @@ dofile(cockpit.."command_defs.lua")
 -- defineRotary("UFC_COM1_SEL", 23, 3300, 300, "UHF Radio", "UFC Comm 1 Channel Selector Turn")
 -- defineRotary("UFC_COM2_SEL", 23, 3301, 301, "UHF Radio", "UFC Comm 2 Channel Selector Turn")
 
--- local function getARC210_COMM1_String_Frequency()
--- 	local arc_210_comm1 = GetDevice(2)
--- 	local freq = tostring(arc_210_comm1:get_frequency())
--- 	if(string.len(freq) == 8) then
--- 		return freq:sub(1,2) .. "." .. freq:sub(3,5)	
--- 	else
--- 		return freq:sub(1,3) .. "." .. freq:sub(4,6)	
--- 	end	
--- end
--- defineString("COMM1_STRING_FREQ", getARC210_COMM1_String_Frequency, 7, "AAA", "COMM1 ARC-210 Frequency (string)")
+local function getARC164_COMM1_String_Frequency()
+	local uhf_comm1 = GetDevice(devices.UHF_RADIO)
+	local freq = tostring(uhf_comm1:get_frequency())
+	if(string.len(freq) == 8) then
+		return freq:sub(1,2) .. "." .. freq:sub(3,5)	
+	else
+		return freq:sub(1,3) .. "." .. freq:sub(4,6)	
+	end	
+end
+
+defineString("COMM1_STRING_FREQ", getARC164_COMM1_String_Frequency, 7, "AAA", "COMM1 ARC-164 Frequency (string)")
 
 -- local function getARC210_COMM2_String_Frequency()
 -- 	local arc_210_comm2 = GetDevice(3)

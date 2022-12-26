@@ -11,7 +11,7 @@ devices["PLT_ICP"] 			= counter()
 devices["ARC201_FM1"]       = counter()
 devices["ARC164"]           = counter()
 devices["INTERCOM"]			= counter()
-devices["UHF_RADIO"]		= counter()
+devices["UHF_RADIO"]		= counter() -- 5
 devices["FM1_RADIO"]		= counter()
 devices["ARC186"]			= counter()
 devices["VHF_RADIO"]		= counter()
@@ -23,7 +23,7 @@ devices["ADF_RADIO"]		= counter()
 devices["VORILS_RADIO"]		= counter()
 
 
-devices["ELECTRIC_SYSTEM"]	= counter()
+devices["ELECTRIC_SYSTEM"]	= counter() -- 14
 devices["ECQ"]				= counter()
 devices["AFCS"]				= counter()
 devices["AHRU"]				= counter()
@@ -32,7 +32,7 @@ devices["EXTLIGHTS"]		= counter()
 devices["HELMET_DEVICE"] 	= counter()
 devices["AVIONICS"]			= counter()
 devices["ASN128B"]			= counter()
-devices["CAUTION_ADVISORY_PANEL"]	= counter()
+devices["CAUTION_ADVISORY_PANEL"]	= counter() -- 23
 devices["VIDS"]				= counter()
 devices["KNEEBOARD"]		= counter()
 devices["EFM_HELPER"]		= counter()
